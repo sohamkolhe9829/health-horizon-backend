@@ -6,6 +6,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(express.json({ limit: '50mb' }));
 
+app.use('/images', express.static('exercises'));
+
 
 const exerciseRoute = require('./routes/exerciseRoute');
 
